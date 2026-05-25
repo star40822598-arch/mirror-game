@@ -17,7 +17,7 @@ public class KeyPickup : MonoBehaviour
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 30f))
+        if (Physics.Raycast(ray, out hit, 120f))
         {
             if (hit.collider.gameObject == gameObject)
             {
