@@ -38,6 +38,7 @@ public class LaserTargetRoom2 : MonoBehaviour
             float t = Mathf.Clamp01(timer / requiredTime);
             Color currentEmission = Color.Lerp(Color.black, emissionColor, t);
             mat.SetColor("_EmissionColor", currentEmission);
+            TutorialManager.Instance.TargetActivated();
 
             if (timer >= requiredTime)
             {
